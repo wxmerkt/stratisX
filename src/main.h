@@ -55,6 +55,17 @@ static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20
 
 static const int64_t COIN_YEAR_REWARD = 1 * CENT; // 1% per year
 
+/** TODO: adjust to actual block heights */
+static const unsigned int MIN_CONFIRMATIONS_SF_ACTIVATION_HEIGHT_TESTNET = 450000;
+static const unsigned int MIN_CONFIRMATIONS_SF_ACTIVATION_HEIGHT_MAINNET = 1000000;
+
+inline int GetStakeMinConfirmations(int height) {
+    if (TestNet())
+        return height < MIN_CONFIRMATIONS_SF_ACTIVATION_HEIGHT_TESTNET ? 10 : 20;
+    else
+        return height < MIN_CONFIRMATIONS_SF_ACTIVATION_HEIGHT_MAINNET ? 50 : 500;
+}
+
 inline bool IsProtocolV1RetargetingFixed(int nHeight) { return TestNet() || nHeight > 0; }
 inline bool IsProtocolV2(int nHeight) { return TestNet() || nHeight > 0; }
 inline bool IsProtocolV3(int64_t nTime) { return TestNet() || nTime > 1470467000; }
@@ -78,7 +89,6 @@ extern CTxMemPool mempool;
 extern std::map<uint256, CBlockIndex*> mapBlockIndex;
 extern std::set<std::pair<COutPoint, unsigned int> > setStakeSeen;
 extern CBlockIndex* pindexGenesisBlock;
-extern int nStakeMinConfirmations;
 extern unsigned int nStakeMinAge;
 extern unsigned int nNodeLifespan;
 extern int nCoinbaseMaturity;
