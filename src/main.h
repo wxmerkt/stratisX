@@ -59,7 +59,7 @@ static const int64_t COIN_YEAR_REWARD = 1 * CENT; // 1% per year
 static const unsigned int MIN_CONFIRMATIONS_SF_ACTIVATION_HEIGHT_TESTNET = 450000;
 static const unsigned int MIN_CONFIRMATIONS_SF_ACTIVATION_HEIGHT_MAINNET = 1000000;
 
-inline int GetStakeMinConfirmations(int height) {
+inline unsigned int GetStakeMinConfirmations(unsigned int height) {
     if (TestNet())
         return height < MIN_CONFIRMATIONS_SF_ACTIVATION_HEIGHT_TESTNET ? 10 : 20;
     else
