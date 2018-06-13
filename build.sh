@@ -1,61 +1,67 @@
 #!/bin/bash
 
 set -e
-
 date
-ps axjf
 
 #################################################################
-# Update Ubuntu and install prerequisites for running Stratis   #
+#                  Build CivX from source                       #
+#################################################################
+
+build(){
+        NPROC=$(nproc)
+        echo "nproc: $NPROC"
+
+	cd src
+        sudo make -j$NPROC -f makefile.unix
+        sudo cp civxd /usr/bin/civxd
+
+        echo ""
+        echo "Build completed ... copied src/civxd to /usr/bin/civxd"
+        echo "Run the application by typing 'civxd' at the command prompt"
+        exit 0
+}
+
+init(){
+        config=~/.civx/civx.conf
+        if [ ! -e "$config" ]
+        then
+           mkdir -p ~/.civx && touch $_/civx.conf
+           user=$(gpw 1 7)
+           password=$(pwgen 13 1)
+           echo "daemon=1" >> $config
+           echo "server=1" >> $config
+           echo "rpcuser=$user" >> $config
+           echo "rpcpassword=$password" >> $config
+           echo "" >> $config
+           echo "logtimestamps=1" >> $config
+        fi
+
+        file=/etc/init.d/civx
+        if [ ! -e "$file" ]
+	then
+	   printf '%s\n%s\n' '#!/bin/sh' 'sudo civxd' | sudo tee /etc/init.d/civx
+           sudo chmod +x /etc/init.d/civx
+           sudo update-rc.d civx defaults
+	fi
+}
+
+
+#################################################################
+#   Update Ubuntu and install prerequisites for running CivX    #
 #################################################################
 sudo apt-get update
+
+
 #################################################################
-# Build Stratis from source                                     #
+#    Install all necessary packages for building CivX           #
 #################################################################
-NPROC=$(nproc)
-echo "nproc: $NPROC"
-#################################################################
-# Install all necessary packages for building Stratis           #
-#################################################################
-sudo apt-get install -y qt4-qmake libqt4-dev libminiupnpc-dev libdb++-dev libdb-dev libcrypto++-dev libqrencode-dev libboost-all-dev build-essential libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libssl-dev ufw git
+sudo apt-get install -y qt4-qmake libqt4-dev libminiupnpc-dev libdb++-dev libdb-dev libcrypto++-dev libqrencode-dev libboost-all-dev build-essential libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libssl-dev ufw git gpw pwgen
 sudo add-apt-repository -y ppa:bitcoin/bitcoin
 sudo apt-get update
 sudo apt-get install -y libdb4.8-dev libdb4.8++-dev
 
-cd /usr/local
-file=/usr/local/stratisX
-if [ ! -e "$file" ]
-then
-        sudo git clone https://github.com/stratisproject/stratisX.git
-fi
 
-cd /usr/local/stratisX/src
-file=/usr/local/stratisX/src/stratisd
-if [ ! -e "$file" ]
-then
-        sudo make -j$NPROC -f makefile.unix
-fi
+init
+build
 
-sudo cp /usr/local/stratisX/src/stratisd /usr/bin/stratisd
-
-################################################################
-# Configure to auto start at boot                                      #
-################################################################
-file=$HOME/.stratis
-if [ ! -e "$file" ]
-then
-        sudo mkdir $HOME/.stratis
-fi
-printf '%s\n%s\n%s\n%s\n' 'daemon=1' 'server=1' 'rpcuser=u' 'rpcpassword=p' | sudo tee $HOME/.stratis/stratis.conf
-file=/etc/init.d/stratis
-if [ ! -e "$file" ]
-then
-        printf '%s\n%s\n' '#!/bin/sh' 'sudo stratisd' | sudo tee /etc/init.d/stratis
-        sudo chmod +x /etc/init.d/stratis
-        sudo update-rc.d stratis defaults
-fi
-
-/usr/bin/stratisd
-echo "Stratis has been setup successfully and is running..."
-exit 0
 

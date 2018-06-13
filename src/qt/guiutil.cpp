@@ -84,7 +84,7 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
     // NovaCoin: check prefix
-    if(uri.scheme() != QString("stratis"))
+    if(uri.scheme() != QString("civx"))
         return false;
 
     SendCoinsRecipient rv;
@@ -129,13 +129,13 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 
 bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 {
-    // Convert stratis:// to stratis:
+    // Convert civx:// to civx:
     //
     //    Cannot handle this later, because bitcoin:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("stratis://"))
+    if(uri.startsWith("civx://"))
     {
-        uri.replace(0, 12, "stratis:");
+        uri.replace(0, 12, "civx:");
     }
     QUrl uriInstance(uri);
     return parseBitcoinURI(uriInstance, out);
@@ -279,7 +279,7 @@ bool ToolTipToRichTextFilter::eventFilter(QObject *obj, QEvent *evt)
 #ifdef WIN32
 boost::filesystem::path static StartupShortcutPath()
 {
-    return GetSpecialFolderPath(CSIDL_STARTUP) / "Stratis.lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / "CivX.lnk";
 }
 
 bool GetStartOnSystemStartup()
@@ -361,7 +361,7 @@ boost::filesystem::path static GetAutostartDir()
 
 boost::filesystem::path static GetAutostartFilePath()
 {
-    return GetAutostartDir() / "stratis.desktop";
+    return GetAutostartDir() / "civx.desktop";
 }
 
 bool GetStartOnSystemStartup()
@@ -402,7 +402,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         // Write a bitcoin.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
-        optionFile << "Name=Stratis\n";
+        optionFile << "Name=CivX\n";
         optionFile << "Exec=" << pszExePath << " -min\n";
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";
@@ -423,10 +423,10 @@ bool SetStartOnSystemStartup(bool fAutoStart) { return false; }
 HelpMessageBox::HelpMessageBox(QWidget *parent) :
     QMessageBox(parent)
 {
-    header = tr("Stratis-Qt") + " " + tr("version") + " " +
+    header = tr("CivX-Qt") + " " + tr("version") + " " +
         QString::fromStdString(FormatFullVersion()) + "\n\n" +
         tr("Usage:") + "\n" +
-        "  stratis-qt [" + tr("command-line options") + "]                     " + "\n";
+        "  civx-qt [" + tr("command-line options") + "]                     " + "\n";
 
     coreOptions = QString::fromStdString(HelpMessage());
 
@@ -435,7 +435,7 @@ HelpMessageBox::HelpMessageBox(QWidget *parent) :
         "  -min                   " + tr("Start minimized") + "\n" +
         "  -splash                " + tr("Show splash screen on startup (default: 1)") + "\n";
 
-    setWindowTitle(tr("Stratis-Qt"));
+    setWindowTitle(tr("CivX-Qt"));
     setTextFormat(Qt::PlainText);
     // setMinimumWidth is ignored for QMessageBox so put in non-breaking spaces to make it wider.
     setText(header + QString(QChar(0x2003)).repeated(50));
@@ -485,7 +485,7 @@ void SetBlackThemeQSS(QApplication& app)
                       "QTabBar::tab:!selected { background: rgb(24,26,30); margin-top: 2px; }"
                       "QTabWidget::pane { border: 1px solid rgb(78,79,83); }"
                       "QToolButton    { background: rgb(30,32,36); color: rgb(116,122,134); border: none; border-left-color: rgb(30,32,36); border-left-style: solid; border-left-width: 6px; margin-top: 8px; margin-bottom: 8px; }"
-                      "QToolButton:checked { color: rgb(255,255,255); border: none; border-left-color: rgb(28,135,200); border-left-style: solid; border-left-width: 6px; }"
+                      "QToolButton:checked { color: rgb(255,127,0); border: none; border-left-color: rgb(255,127,0); border-left-style: solid; border-left-width: 6px; }"
                       "QProgressBar   { color: rgb(149,148,148); border-color: rgb(255,255,255); border-width: 1px; border-style: solid; }"
                       "QProgressBar::chunk { background: rgb(255,255,255); }"
                       "QTreeView::item { background: rgb(41,44,48); color: rgb(212,213,213); }"

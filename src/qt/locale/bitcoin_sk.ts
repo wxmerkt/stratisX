@@ -3,22 +3,22 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Stratis</source>
-        <translation>O Stratis</translation>
+        <source>About CivX</source>
+        <translation>O CivX</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Stratis&lt;/b&gt; version</source>
-        <translation>Verzia &lt;b&gt;Stratis&lt;/b&gt;</translation>
+        <source>&lt;b&gt;CivX&lt;/b&gt; version</source>
+        <translation>Verzia &lt;b&gt;CivX&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Stratis developers</source>
+Copyright © 2014 The CivX developers</source>
         <translation>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Stratis developers</translation>
+Copyright © 2014 The CivX developers</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -65,8 +65,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="-43"/>
-        <source>These are your Stratis addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Toto sú vaše Stratis adresy pre príjem platieb. Možno budete chcieť dať inú každému odosielateľovi, aby ste mohli sledovať, kto Vám platí.</translation>
+        <source>These are your CivX addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Toto sú vaše CivX adresy pre príjem platieb. Možno budete chcieť dať inú každému odosielateľovi, aby ste mohli sledovať, kto Vám platí.</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -80,8 +80,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign a message to prove you own a Stratis address</source>
-        <translation>Podpísať správu ako dôkaz, že vlastníte túto Stratis adresu</translation>
+        <source>Sign a message to prove you own a CivX address</source>
+        <translation>Podpísať správu ako dôkaz, že vlastníte túto CivX adresu</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -95,8 +95,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="-10"/>
-        <source>Verify a message to ensure it was signed with a specified Stratis address</source>
-        <translation>Overte správu, aby ste zabezpečili, že bola podpísaná s určitou Stratis adresou</translation>
+        <source>Verify a message to ensure it was signed with a specified CivX address</source>
+        <translation>Overte správu, aby ste zabezpečili, že bola podpísaná s určitou CivX adresou</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -181,7 +181,7 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="+33"/>
-        <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</source>
+        <source>Select this option to allocate non-reserved tokens to earn staking rewards. This unlocks tokens ONLY for staking purposes, not outbound transfers.</source>
         <translation>Slúži na vypnutie trivial sendmoney keď je ohrozený OS účet. Neposkytuje žiadnu skutočnú istotu.</translation>
     </message>
     <message>
@@ -263,8 +263,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="+82"/>
-        <source>Stratis will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>Stratis sa teraz zavrie aby dokončil proces zašifrovania. Nezabudnite, že zašifrovanie vašej peňaženky nemôže plne chrániť vaše mince pred krádežou malwarom, ktorý napadol váš počítač.</translation>
+        <source>CivX will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your tokens from being stolen by malware infecting your computer.</source>
+        <translation>CivX sa teraz zavrie aby dokončil proces zašifrovania. Nezabudnite, že zašifrovanie vašej peňaženky nemôže plne chrániť vaše mince pred krádežou malwarom, ktorý napadol váš počítač.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -357,8 +357,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Stratis</source>
-        <translation>Zobraziť informácie o Stratis</translation>
+        <source>Show information about CivX</source>
+        <translation>Zobraziť informácie o CivX</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -397,13 +397,13 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="-55"/>
-        <source>Send coins to a Stratis address</source>
-        <translation>Poslať mince na Stratis adresu</translation>
+        <source>Send tokens to a CivX address</source>
+        <translation>Poslať mince na CivX adresu</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>Modify configuration options for Stratis</source>
-        <translation>Upraviť možnosti konfigurácie pre Stratis</translation>
+        <source>Modify configuration options for CivX</source>
+        <translation>Upraviť možnosti konfigurácie pre CivX</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -443,8 +443,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     <message>
         <location line="-214"/>
         <location line="+555"/>
-        <source>Stratis</source>
-        <translation>Stratis</translation>
+        <source>CivX</source>
+        <translation>CivX</translation>
     </message>
     <message>
         <location line="-555"/>
@@ -453,8 +453,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="+193"/>
-        <source>&amp;About Stratis</source>
-        <translation>&amp;O Stratis</translation>
+        <source>&amp;About CivX</source>
+        <translation>&amp;O CivX</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -505,13 +505,13 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     <message>
         <location line="+0"/>
         <location line="+58"/>
-        <source>Stratis client</source>
-        <translation>Stratis klient</translation>
+        <source>CivX client</source>
+        <translation>CivX klient</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to Stratis network</source>
-        <translation><numerusform>%n aktívne spojenie s Stratis sieťov</numerusform><numerusform>%n aktívnych spojení s Stratis sieťov</numerusform><numerusform>%n aktívnych spojení s Stratis sieťou</numerusform></translation>
+        <source>%n active connection(s) to CivX network</source>
+        <translation><numerusform>%n aktívne spojenie s CivX sieťov</numerusform><numerusform>%n aktívnych spojení s CivX sieťov</numerusform><numerusform>%n aktívnych spojení s CivX sieťou</numerusform></translation>
     </message>
     <message>
         <location line="+488"/>
@@ -535,7 +535,7 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="+2"/>
-        <source>Not staking because you don&apos;t have mature coins</source>
+        <source>Not staking because you don&apos;t have mature tokens</source>
         <translation>Nestávkujem pretože nemáte dozreté mince</translation>
     </message>
     <message>
@@ -604,8 +604,8 @@ Adresa: %4</translation>
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid Stratis address or malformed URI parameters.</source>
-        <translation>URI nemožno analyzovať! Toto môže byť spôsobené neplatnou Stratis adresu alebo chybnými URI parametrami.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid CivX address or malformed URI parameters.</source>
+        <translation>URI nemožno analyzovať! Toto môže byť spôsobené neplatnou CivX adresu alebo chybnými URI parametrami.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -717,7 +717,7 @@ Adresa: %4</translation>
     </message>
     <message>
         <location line="+69"/>
-        <source>This transaction is over the size limit. You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network. Do you want to pay the fee?</source>
+        <source>The transaction fee is %1, which is given to the nodes that process and validate your transaction. This supports and secures the network. Click Yes to accept this fee</source>
         <translation>Táto transakcia je nad veľkostný limit. Stále ju môžete poslať za poplatok %1, ktorý ide uzlom spracujúcim vaše transakcie, čím pomáhate podporovať sieť. Chcete zaplatiť poplatok?</translation>
     </message>
     <message>
@@ -727,8 +727,8 @@ Adresa: %4</translation>
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+104"/>
-        <source>A fatal error occurred. Stratis can no longer continue safely and will quit.</source>
-        <translation>Došlo k závažnej chybe. Stratis už nemôže pokračovať bezpečne a bude ukončený.</translation>
+        <source>A fatal error occurred. CivX can no longer continue safely and will quit.</source>
+        <translation>Došlo k závažnej chybe. CivX už nemôže pokračovať bezpečne a bude ukončený.</translation>
     </message>
 </context>
 <context>
@@ -1061,8 +1061,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Stratis address.</source>
-        <translation>Zadaná adresa &quot;%1&quot; nie je platnou Stratis adresou.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid CivX address.</source>
+        <translation>Zadaná adresa &quot;%1&quot; nie je platnou CivX adresou.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1080,8 +1080,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     <message>
         <location filename="../guiutil.cpp" line="+426"/>
         <location line="+12"/>
-        <source>Stratis-Qt</source>
-        <translation>Stratis-Qt</translation>
+        <source>CivX-Qt</source>
+        <translation>CivX-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1153,13 +1153,13 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Stratis after logging in to the system.</source>
-        <translation>Automaticky spustiť Stratis po prihlásení sa do systému.</translation>
+        <source>Automatically start CivX after logging in to the system.</source>
+        <translation>Automaticky spustiť CivX po prihlásení sa do systému.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Stratis on system login</source>
-        <translation>&amp;Spustiť Stratis pri prihlásení do systému</translation>
+        <source>&amp;Start CivX on system login</source>
+        <translation>&amp;Spustiť CivX pri prihlásení do systému</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -1168,8 +1168,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Stratis client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automaticky otvoriť port klienta Stratis na routeri. To funguje iba vtedy, ak váš router podporuje UPnP a je povolené.</translation>
+        <source>Automatically open the CivX client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automaticky otvoriť port klienta CivX na routeri. To funguje iba vtedy, ak váš router podporuje UPnP a je povolené.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1198,8 +1198,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="-57"/>
-        <source>Connect to the Stratis network through a SOCKS5 proxy (e.g. when connecting through Tor).</source>
-        <translation>Pripojiť k sieti Stratis cez SOCKS5 proxy (napr. pri pripojení cez Tor).</translation>
+        <source>Connect to the CivX network through a SOCKS5 proxy (e.g. when connecting through Tor).</source>
+        <translation>Pripojiť k sieti CivX cez SOCKS5 proxy (napr. pri pripojení cez Tor).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1243,8 +1243,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Stratis.</source>
-        <translation>Tu môžete nastaviť jazyk používateľského rozhrania. Toto nastavenie sa prejaví až po reštartovaní Stratis.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting CivX.</source>
+        <translation>Tu môžete nastaviť jazyk používateľského rozhrania. Toto nastavenie sa prejaví až po reštartovaní CivX.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1310,8 +1310,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Stratis.</source>
-        <translation>Toto nastavenie sa prejaví až po reštartovaní Stratis.</translation>
+        <source>This setting will take effect after restarting CivX.</source>
+        <translation>Toto nastavenie sa prejaví až po reštartovaní CivX.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1329,8 +1329,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     <message>
         <location line="+46"/>
         <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Stratis network after a connection is established, but this process has not completed yet.</source>
-        <translation>Zobrazené informácie môžu byť zastaralé. Vaša peňaženka sa automaticky synchronizuje so sieťou Stratis po nadviazaní spojenia, ale tento proces nie je ešte dokončený.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the CivX network after a connection is established, but this process has not completed yet.</source>
+        <translation>Zobrazené informácie môžu byť zastaralé. Vaša peňaženka sa automaticky synchronizuje so sieťou CivX po nadviazaní spojenia, ale tento proces nie je ešte dokončený.</translation>
     </message>
     <message>
         <location line="-173"/>
@@ -1359,7 +1359,7 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+80"/>
-        <source>Immature:</source>
+        <source>Maturing:</source>
         <translation>Nezrelé:</translation>
     </message>
     <message>
@@ -1389,7 +1389,7 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="-32"/>
-        <source>Total of coins that was staked, and do not yet count toward the current balance</source>
+        <source>Total of tokens that was staked, and do not yet count toward the current balance</source>
         <translation>Súčet mincí, ktoré sú v stávke a ešte neboli započítané do aktuálneho zostatku</translation>
     </message>
     <message>
@@ -1403,8 +1403,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start stratis: click-to-pay handler</source>
-        <translation>Stratis sa nedá spustiť: click-to-pay handler</translation>
+        <source>Cannot start civx: click-to-pay handler</source>
+        <translation>CivX sa nedá spustiť: click-to-pay handler</translation>
     </message>
 </context>
 <context>
@@ -1571,8 +1571,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Stratis-Qt help message to get a list with possible Stratis command-line options.</source>
-        <translation>Zobraziť Stratis-Qt nápovedu k získaniu zoznamu pre možnosti  príkazového riadku Stratis.</translation>
+        <source>Show the CivX-Qt help message to get a list with possible CivX command-line options.</source>
+        <translation>Zobraziť CivX-Qt nápovedu k získaniu zoznamu pre možnosti  príkazového riadku CivX.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1591,13 +1591,13 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>Stratis - Debug window</source>
-        <translation>Stratis - Ladiace okno</translation>
+        <source>CivX - Debug window</source>
+        <translation>CivX - Ladiace okno</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Stratis Core</source>
-        <translation>Jadro Stratis</translation>
+        <source>CivX Core</source>
+        <translation>Jadro CivX</translation>
     </message>
     <message>
         <location line="+256"/>
@@ -1606,8 +1606,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Stratis debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Otvorte Stratis súbor denníku ladenia z aktuálneho adresára dát. To môže trvať niekoľko sekúnd pre veľké súbory denníka.</translation>
+        <source>Open the CivX debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Otvorte CivX súbor denníku ladenia z aktuálneho adresára dát. To môže trvať niekoľko sekúnd pre veľké súbory denníka.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1616,8 +1616,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="+325"/>
-        <source>Welcome to the Stratis RPC console.</source>
-        <translation>Vitajte v konzole Stratis RPC.</translation>
+        <source>Welcome to the CivX RPC console.</source>
+        <translation>Vitajte v konzole CivX RPC.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1797,8 +1797,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-174"/>
-        <source>Enter a Stratis address (e.g. SjBj1QvJvsAkU5EBKggdZ8gWc4oK2F5AMY)</source>
-        <translation>Zadajte Stratis adresu (napr. SjBj1QvJvsAkU5EBKggdZ8gWc4oK2F5AMY)</translation>
+        <source>Enter a CivX address (e.g. CVX62eYNnJaTHEQLf5E4hbSX1D9x6UKiYd)</source>
+        <translation>Zadajte CivX adresu (napr. CVX62eYNnJaTHEQLf5E4hbSX1D9x6UKiYd)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1892,13 +1892,13 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+5"/>
-        <source>Error: The transaction was rejected. This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
+        <source>Error: The transaction was rejected. This might happen if some of the tokens in your wallet were already spent, such as if you used a copy of wallet.dat and tokens were spent in the copy but not marked as spent here.</source>
         <translation>Chyba: Transakcia bola zamietnutá. To môže nastať, ak niektoré z mincí vo vašej peňaženke sa už použili, ako napríklad, ak ste použili kópiu wallet.dat a mince boli použité v kópii, ale neboli označené tu ako použité.</translation>
     </message>
     <message>
         <location line="+247"/>
-        <source>WARNING: Invalid Stratis address</source>
-        <translation>UPOZORNENIE: Neplatná Stratis adresa</translation>
+        <source>WARNING: Invalid CivX address</source>
+        <translation>UPOZORNENIE: Neplatná CivX adresa</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1930,8 +1930,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. SjBj1QvJvsAkU5EBKggdZ8gWc4oK2F5AMY)</source>
-        <translation>Adresa pre poslanie platby (napr. SjBj1QvJvsAkU5EBKggdZ8gWc4oK2F5AMY)</translation>
+        <source>The address to send the payment to (e.g. CVX62eYNnJaTHEQLf5E4hbSX1D9x6UKiYd)</source>
+        <translation>Adresa pre poslanie platby (napr. CVX62eYNnJaTHEQLf5E4hbSX1D9x6UKiYd)</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -1971,8 +1971,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Stratis address (e.g. SjBj1QvJvsAkU5EBKggdZ8gWc4oK2F5AMY)</source>
-        <translation>Zadajte Stratis adresu (napr. SjBj1QvJvsAkU5EBKggdZ8gWc4oK2F5AMY)</translation>
+        <source>Enter a CivX address (e.g. CVX62eYNnJaTHEQLf5E4hbSX1D9x6UKiYd)</source>
+        <translation>Zadajte CivX adresu (napr. CVX62eYNnJaTHEQLf5E4hbSX1D9x6UKiYd)</translation>
     </message>
 </context>
 <context>
@@ -1995,8 +1995,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. SjBj1QvJvsAkU5EBKggdZ8gWc4oK2F5AMY)</source>
-        <translation>Adresa na podpísanie správy (napr. SjBj1QvJvsAkU5EBKggdZ8gWc4oK2F5AMY)</translation>
+        <source>The address to sign the message with (e.g. CVX62eYNnJaTHEQLf5E4hbSX1D9x6UKiYd)</source>
+        <translation>Adresa na podpísanie správy (napr. CVX62eYNnJaTHEQLf5E4hbSX1D9x6UKiYd)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -2032,8 +2032,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Stratis address</source>
-        <translation>Podpísať správu ako dôkaz, že vlastníte túto Stratis adresu</translation>
+        <source>Sign the message to prove you own this CivX address</source>
+        <translation>Podpísať správu ako dôkaz, že vlastníte túto CivX adresu</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2059,13 +2059,13 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. SjBj1QvJvsAkU5EBKggdZ8gWc4oK2F5AMY)</source>
-        <translation>Adresa správy bola podpísaná (napr. SjBj1QvJvsAkU5EBKggdZ8gWc4oK2F5AMY)</translation>
+        <source>The address the message was signed with (e.g. CVX62eYNnJaTHEQLf5E4hbSX1D9x6UKiYd)</source>
+        <translation>Adresa správy bola podpísaná (napr. CVX62eYNnJaTHEQLf5E4hbSX1D9x6UKiYd)</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Stratis address</source>
-        <translation>Overte správu, aby ste sa ubezpečili, že bola podpísaná s danou Stratis adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified CivX address</source>
+        <translation>Overte správu, aby ste sa ubezpečili, že bola podpísaná s danou CivX adresou</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2075,8 +2075,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Stratis address (e.g. SjBj1QvJvsAkU5EBKggdZ8gWc4oK2F5AMY)</source>
-        <translation>Zadajte Stratis adresu (napr. SjBj1QvJvsAkU5EBKggdZ8gWc4oK2F5AMY)</translation>
+        <source>Enter a CivX address (e.g. CVX62eYNnJaTHEQLf5E4hbSX1D9x6UKiYd)</source>
+        <translation>Zadajte CivX adresu (napr. CVX62eYNnJaTHEQLf5E4hbSX1D9x6UKiYd)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2085,8 +2085,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Stratis signature</source>
-        <translation>Zadajte Stratis podpis</translation>
+        <source>Enter CivX signature</source>
+        <translation>Zadajte CivX podpis</translation>
     </message>
     <message>
         <location line="+85"/>
@@ -2293,7 +2293,7 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Generated coins must mature 510 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
+        <source>Generated tokens must mature 51 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
         <translation>Generované mince musia zrieť 510 blokov pred tým, než môžu byť použité. Keď sa vygeneroval tento blok, bol vysielaný do siete, kde má byť pridaný do reťazca blokov. Ak sa nepodarí dostať ho do reťazca blokov, jeho stav sa zmení na &quot;Neprijatý&quot;, a nebude použiteľný. Toto sa môže občas stať, ak iný uzol generuje blok v priebehu niekoľkých sekúnd pred Vami.</translation>
     </message>
     <message>
@@ -2414,7 +2414,7 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Immature (%1 confirmations, will be available after %2)</source>
+        <source>Maturing (%1 confirmations, will be available after %2)</source>
         <translation>Nezrelé (%1 potvrdení, bude k dispozícii po %2)</translation>
     </message>
     <message>
@@ -2664,8 +2664,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+171"/>
-        <source>Stratis version</source>
-        <translation>Verzia Stratis</translation>
+        <source>CivX version</source>
+        <translation>Verzia CivX</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2674,8 +2674,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or stratisd</source>
-        <translation>Pošli príkaz na -server alebo stratisd</translation>
+        <source>Send command to -server or civxd</source>
+        <translation>Pošli príkaz na -server alebo civxd</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2694,13 +2694,13 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: stratis.conf)</source>
-        <translation>Zadajte konfiguračný súbor (predvolené: stratis.conf)</translation>
+        <source>Specify configuration file (default: civx.conf)</source>
+        <translation>Zadajte konfiguračný súbor (predvolené: civx.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: stratisd.pid)</source>
-        <translation>Zadajte pid súbor (predvolené: stratisd.pid)</translation>
+        <source>Specify pid file (default: civxd.pid)</source>
+        <translation>Zadajte pid súbor (predvolené: civxd.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2717,24 +2717,24 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=stratisrpc
+rpcuser=civxrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Stratis Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;CivX Alert&quot; admin@foo.com
 </source>
         <translation>%s, musíte nastaviť rpcpassword v konfiguračnom súbore:
 %s
 Doporučuje sa použiť nasledovné náhodne heslo:
-rpcuser=stratisrpc
+rpcuser=civxrpc
 rpcpassword=%s
 (toto heslo si nemusíte pamätať)
 Užívateľské meno a heslo NESMIE byť rovnaké.
 Ak súbor neexistuje, vytvorte ho s právami &quot;môže čítať iba vlastník&quot;.
 Odporúča sa tiež nastaviť &quot;alertnotify&quot;, takže budete upozornení na problémy,
-napríklad: alertnotify=echo %%s | mail -s &quot;Stratis upozornenie&quot; admin@foo.com
+napríklad: alertnotify=echo %%s | mail -s &quot;CivX upozornenie&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -2839,8 +2839,8 @@ napríklad: alertnotify=echo %%s | mail -s &quot;Stratis upozornenie&quot; admin
     </message>
     <message>
         <location line="-103"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Stratis will not work properly.</source>
-        <translation>Upozornenie: Skontrolujte, že dátum a čas počítača sú správne! Ak je Váš čas nesprávny Stratis nebude pracovať správne.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong CivX will not work properly.</source>
+        <translation>Upozornenie: Skontrolujte, že dátum a čas počítača sú správne! Ak je Váš čas nesprávny CivX nebude pracovať správne.</translation>
     </message>
     <message>
         <location line="+130"/>
@@ -2979,7 +2979,7 @@ napríklad: alertnotify=echo %%s | mail -s &quot;Stratis upozornenie&quot; admin
     </message>
     <message>
         <location line="+2"/>
-        <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
+        <source>Error: The transaction was rejected! This might happen if some of the tokens in your wallet were already spent, such as if you used a copy of wallet.dat and tokens were spent in the copy but not marked as spent here.</source>
         <translation>Chyba: Transakcia bola zamietnutá! Toto môže nastať, ak niektoré z mincí vo vašej peňaženke sa už použili, ako napríklad, ak ste použili kópiu wallet.dat a mince boli použité v kópii, ale neboli označené ako použité tu.</translation>
     </message>
     <message>
@@ -3134,8 +3134,8 @@ napríklad: alertnotify=echo %%s | mail -s &quot;Stratis upozornenie&quot; admin
     </message>
     <message>
         <location line="+8"/>
-        <source>Initialization sanity check failed. Stratis is shutting down.</source>
-        <translation>Úvodné kontrolné testy zlyhali. Stratis sa teraz zatvori.</translation>
+        <source>Initialization sanity check failed. CivX is shutting down.</source>
+        <translation>Úvodné kontrolné testy zlyhali. CivX sa teraz zatvori.</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -3189,13 +3189,13 @@ napríklad: alertnotify=echo %%s | mail -s &quot;Stratis upozornenie&quot; admin
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Stratis</source>
-        <translation>Chyba pri načítaní wallet.dat: Peňaženka vyžaduje novšiu verziu Stratis</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of CivX</source>
+        <translation>Chyba pri načítaní wallet.dat: Peňaženka vyžaduje novšiu verziu CivX</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Stratis to complete</source>
-        <translation>Peňaženka potrebuje byť prepísaná: reštartujte Stratis k dokončeniu</translation>
+        <source>Wallet needed to be rewritten: restart CivX to complete</source>
+        <translation>Peňaženka potrebuje byť prepísaná: reštartujte CivX k dokončeniu</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3254,8 +3254,8 @@ napríklad: alertnotify=echo %%s | mail -s &quot;Stratis upozornenie&quot; admin
     </message>
     <message>
         <location line="+124"/>
-        <source>Unable to bind to %s on this computer. Stratis is probably already running.</source>
-        <translation>Nemôžem sa pripojiť na %s na tomto počítači. Stratis je pravdepodobne už beží.</translation>
+        <source>Unable to bind to %s on this computer. CivX is probably already running.</source>
+        <translation>Nemôžem sa pripojiť na %s na tomto počítači. CivX je pravdepodobne už beží.</translation>
     </message>
     <message>
         <location line="-101"/>
@@ -3289,8 +3289,8 @@ napríklad: alertnotify=echo %%s | mail -s &quot;Stratis upozornenie&quot; admin
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Stratis is probably already running.</source>
-        <translation>Nedá sa zamknúť dátová zložka %s. Stratis je pravdepodobne už spustený</translation>
+        <source>Cannot obtain a lock on data directory %s. CivX is probably already running.</source>
+        <translation>Nedá sa zamknúť dátová zložka %s. CivX je pravdepodobne už spustený</translation>
     </message>
     <message>
         <location line="+4"/>

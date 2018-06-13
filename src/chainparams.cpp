@@ -40,7 +40,7 @@ void MineGenesis(CBlock genesis){
 	}
     }
     printf("Found Genesis, Nonce: %ld, Hash: %s\n", genesis.nNonce, genesis.GetHash().GetHex().c_str());
-    printf("Gensis Hash Merkle: %s\n", genesis.hashMerkleRoot.ToString().c_str());
+    printf("Genesis Hash Merkle: %s\n", genesis.hashMerkleRoot.ToString().c_str());
 }
 
 //
@@ -71,13 +71,13 @@ public:
         // The message start string is designed to be unlikely to occur in normal data.
         // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
         // a large 4-byte int at any alignment.
-        pchMessageStart[0] = 0x70;
-        pchMessageStart[1] = 0x35;
-        pchMessageStart[2] = 0x22;
-        pchMessageStart[3] = 0x05;
+        pchMessageStart[0] = 0x28;
+        pchMessageStart[1] = 0x62;
+        pchMessageStart[2] = 0x48;
+        pchMessageStart[3] = 0x76;
         vAlertPubKey = ParseHex("0486bce1bac0d543f104cbff2bd23680056a3b9ea05e1137d2ff90eeb5e08472eb500322593a2cb06fbf8297d7beb6cd30cb90f98153b5b7cce1493749e41e0284");
-        nDefaultPort = 16178;
-        nRPCPort = 16174;
+        nDefaultPort = 4562;
+        nRPCPort = 4561;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20);
 
         // Build the genesis block. Note that the output of the genesis coinbase cannot
@@ -88,41 +88,42 @@ public:
         //    CTxIn(COutPoint(0000000000, 4294967295), coinbase 00012a24323020466562203230313420426974636f696e2041544d7320636f6d6520746f20555341)
         //    CTxOut(empty)
         //  vMerkleTree: 12630d16a9
-        const char* pszTimestamp = "http://www.theonion.com/article/olympics-head-priestess-slits-throat-official-rio--53466";
+        const char* pszTimestamp = "http://www.bbc.com/news/world-middle-east-43691291";
+        int64_t genesisTime = 1523205120;                // 2018-04-08 16:32:00 UTC
         std::vector<CTxIn> vin;
         vin.resize(1);
         vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         std::vector<CTxOut> vout;
         vout.resize(1);
         vout[0].SetEmpty();
-        CTransaction txNew(1, 1470467000, vin, vout, 0);
+        CTransaction txNew(1, genesisTime, vin, vout, 0);
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime    = 1470467000;
+        genesis.nTime    = genesisTime;
         genesis.nBits    = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce   = 1831645;
+        genesis.nNonce   = 842767;
 
         hashGenesisBlock = genesis.GetHash();
 
-        assert(hashGenesisBlock == uint256("0x0000066e91e46e5a264d42c89e1204963b2ee6be230b443e9159020539d972af"));
-        assert(genesis.hashMerkleRoot == uint256("0x65a26bc20b0351aebf05829daefa8f7db2f800623439f3c114257c91447f1518"));
+        assert(hashGenesisBlock == uint256("0x00000036090a68c523471da7a4f0f958c1b4403fef74a003be7f71877699cab7"));
+        assert(genesis.hashMerkleRoot == uint256("0x85c4a8a116eb457ff74bb64908e71c6780bff7e69ad3dadc9df6cd753c21f937"));
 
-        vSeeds.push_back(CDNSSeedData("Seednode1", "seednode1.stratisplatform.com"));
-        vSeeds.push_back(CDNSSeedData("Seednode2", "seednode2.stratis.cloud"));
-        vSeeds.push_back(CDNSSeedData("Seednode3", "seednode3.stratisplatform.com"));
-        vSeeds.push_back(CDNSSeedData("Seednode4", "seednode4.stratis.cloud"));
+        vSeeds.push_back(CDNSSeedData("Seednode1", "seednode1.civx.cloud"));
+        vSeeds.push_back(CDNSSeedData("Seednode2", "seednode2.exponentialz.com"));
+        vSeeds.push_back(CDNSSeedData("Seednode3", "seednode3.civx.cloud"));
+        vSeeds.push_back(CDNSSeedData("Seednode4", "seednode4.exponentialz.com"));
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 63);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 125);
-        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1, (63+128));
-        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xC2)(0x1E).convert_to_container<std::vector<unsigned char> >();
-        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0xDD).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 28);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 87);
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1, (28+128));
+        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
 
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
-        nLastPOWBlock = 12500;
+        nLastPOWBlock = 45000;
     }
 
     virtual const CBlock& GenesisBlock() const { return genesis; }
@@ -148,32 +149,33 @@ public:
         // The message start string is designed to be unlikely to occur in normal data.
         // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
         // a large 4-byte int at any alignment.
-        pchMessageStart[0] = 0x71;
-        pchMessageStart[1] = 0x31;
-        pchMessageStart[2] = 0x21;
-        pchMessageStart[3] = 0x11;
+        pchMessageStart[0] = 0x25;
+        pchMessageStart[1] = 0x16;
+        pchMessageStart[2] = 0x74;
+        pchMessageStart[3] = 0x62;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 16);
         vAlertPubKey = ParseHex("0471dc165db490094d35cde15b1f5d755fa6ad6f2b5ed0f340e3f17f57389c3c2af113a8cbcc885bde73305a553b5640c83021128008ddf882e856336269080496");
-        nDefaultPort = 26178;
-        nRPCPort = 26174;
+        nDefaultPort = 14562;
+        nRPCPort = 14561;
 
         strDataDir = "testnet";
         // Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nBits  = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce = 2433759;
-        genesis.nTime    = 1493909211;
-  
+        genesis.nNonce = 440504;
+        genesis.nTime  = 1528761600;                  // 2018-06-12 00:00:00 UTC
+
         hashGenesisBlock = genesis.GetHash();
-         
-        assert(hashGenesisBlock == uint256("0x00000e246d7b73b88c9ab55f2e5e94d9e22d471def3df5ea448f5576b1d156b9"));
+
+        assert(hashGenesisBlock == uint256("0x0000059bb2c2048493efcb0f1a034972b3ce4089d54c93b69aaab212fb369887"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("stratisplatform.com", "testnode1.stratisplatform.com"));
+        vSeeds.push_back(CDNSSeedData("testseednode1", "testnode1.civx.cloud"));
+        vSeeds.push_back(CDNSSeedData("testseednode2", "testnode2.exponentialz.com"));
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 65); // stratis test net start with T
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 196);
-        base58Prefixes[SECRET_KEY]     = std::vector<unsigned char>(1, 65 + 128);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 75);    // civx test net start with X
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 206);
+        base58Prefixes[SECRET_KEY]     = std::vector<unsigned char>(1, 75 + 128);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x35)(0x83)(0x94).convert_to_container<std::vector<unsigned char> >();
 
@@ -192,19 +194,19 @@ static CTestNetParams testNetParams;
 class CRegTestParams : public CTestNetParams {
 public:
     CRegTestParams() {
-        pchMessageStart[0] = 0xfa;
-        pchMessageStart[1] = 0xbf;
-        pchMessageStart[2] = 0xb5;
-        pchMessageStart[3] = 0xda;
+        pchMessageStart[0] = 0x4a;
+        pchMessageStart[1] = 0xdb;
+        pchMessageStart[2] = 0xea;
+        pchMessageStart[3] = 0xfc;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 1);
-        genesis.nTime = 1411111111;
+        genesis.nTime  = 1391501792;
         genesis.nBits  = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce = 1659424;
+        genesis.nNonce = 4249953;
         hashGenesisBlock = genesis.GetHash();
-        nDefaultPort = 18444;
+        nDefaultPort = 15888;
         strDataDir = "regtest";
 //        MineGenesis(genesis);
-        assert(hashGenesisBlock == uint256("0x00000d97ffc6d5e27e78954c5bf9022b081177756488f44780b4f3c2210b1645"));
+        assert(hashGenesisBlock == uint256("0x00000755a53922ad3443a7609ee700ca246a547783116f2085fff1e486e56085"));
 
         vSeeds.clear();  // Regtest mode doesn't have any DNS seeds.
     }

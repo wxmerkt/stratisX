@@ -1,6 +1,7 @@
 // Copyright (c) 2012-2013 The PPCoin developers
 // Copyright (c) 2014 The Blackcoin developers
 // Copyright (c) 2016 The Stratis developers
+// Copyright (c) 2018 The ExOFoundation developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -15,7 +16,7 @@ using namespace std;
 int64_t GetWeight(int64_t nIntervalBeginning, int64_t nIntervalEnd)
 {
     // Kernel hash weight starts from 0 at the min age
-    // this change increases active coins participating the hash and helps
+    // this change increases active tokens participating the hash and helps
     // to secure the network when proof-of-stake difficulty is low
 
     return nIntervalEnd - nIntervalBeginning - nStakeMinAge;
@@ -317,12 +318,12 @@ static bool CheckStakeKernelHashV1(unsigned int nBits, const CBlock& blockFrom, 
     return true;
 }
 
-// Stratis kernel protocol
+// CivX kernel protocol
 // coinstake must meet hash target according to the protocol:
 // kernel (input 0) must meet the formula
 //     hash(nStakeModifier + txPrev.block.nTime + txPrev.nTime + txPrev.vout.hash + txPrev.vout.n + nTime) < bnTarget * nWeight
 // this ensures that the chance of getting a coinstake is proportional to the
-// amount of coins one owns.
+// amount of tokens one owns.
 // The reason this hash is chosen is the following:
 //   nStakeModifier: scrambles computation to make it very difficult to precompute
 //                   future proof-of-stake
@@ -486,7 +487,7 @@ bool CheckKernel(CBlockIndex* pindexPrev, unsigned int nBits, int64_t nTime, con
     else
     {
         if (block.GetBlockTime() + nStakeMinAge > nTime)
-            return false; // only count coins meeting min age requirement
+            return false; // only count tokens meeting min age requirement
     }
 
     if (pBlockTime)

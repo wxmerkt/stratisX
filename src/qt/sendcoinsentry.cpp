@@ -24,7 +24,7 @@ SendCoinsEntry::SendCoinsEntry(QWidget *parent) :
 #if QT_VERSION >= 0x040700
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
     ui->addAsLabel->setPlaceholderText(tr("Enter a label for this address to add it to your address book"));
-    ui->payTo->setPlaceholderText(tr("Enter a Stratis address (e.g. SjBj1QvJvsAkU5EBKggdZ8gWc4oK2F5AMY)"));
+    ui->payTo->setPlaceholderText(tr("Enter a CivX address (e.g. CVX62eYNnJaTHEQLf5E4hbSX1D9x6UKiYd)"));
 #endif
     setFocusPolicy(Qt::TabFocus);
     setFocusProxy(ui->payTo);
@@ -111,7 +111,7 @@ bool SendCoinsEntry::validate()
     {
         if(ui->payAmount->value() <= 0)
         {
-            // Cannot send 0 coins or less
+            // Cannot send 0 tokens or less
             ui->payAmount->setValid(false);
             retval = false;
         }

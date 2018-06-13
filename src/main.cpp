@@ -22,7 +22,7 @@ using namespace std;
 using namespace boost;
 
 #if defined(NDEBUG)
-# error "Stratis cannot be compiled without assertions."
+# error "CivX cannot be compiled without assertions."
 #endif
 
 //
@@ -77,7 +77,7 @@ map<uint256, set<uint256> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "Stratis Signed Message:\n";
+const string strMessageMagic = "CivX Signed Message:\n";
 
 //////////////////////////////////////////////////////////////////////////////
 //
@@ -996,8 +996,8 @@ static CBigNum GetProofOfStakeLimit(int nHeight)
 // miner's coin base reward
 int64_t GetProofOfWorkReward(int64_t nFees)
 {
-	int64_t PreMine = 98000000 * COIN;
-    if(pindexBest->nHeight == 1){return PreMine;} else {return 4*COIN;}
+	int64_t PreMine = 300000000 * COIN;
+    if(pindexBest->nHeight == 1){return PreMine;} else {return 12*COIN;}
 }
 
 // miner's coin stake reward
@@ -1816,7 +1816,7 @@ bool CBlock::SetBestChain(CTxDB& txdb, CBlockIndex* pindexNew)
 }
 
 // ppcoin: total coin age spent in transaction, in the unit of coin-days.
-// Only those coins meeting minimum age requirement counts. As those
+// Only those tokens meeting minimum age requirement counts. As those
 // transactions not in main chain are not currently indexed so we
 // might not find out about their coin age. Older transactions are 
 // guaranteed to be in main chain by sync-checkpoint. This rule is
@@ -1846,7 +1846,7 @@ bool CTransaction::GetCoinAge(CTxDB& txdb, const CBlockIndex* pindexPrev, uint64
             if (IsConfirmedInNPrevBlocks(txindex, pindexPrev, nStakeMinConfirmations - 1, nSpendDepth))
             {
                 LogPrint("coinage", "coin age skip nSpendDepth=%d\n", nSpendDepth + 1);
-                continue; // only count coins meeting min confirmations requirement
+                continue; // only count tokens meeting min confirmations requirement
             }
         }
         else
@@ -1856,7 +1856,7 @@ bool CTransaction::GetCoinAge(CTxDB& txdb, const CBlockIndex* pindexPrev, uint64
             if (!block.ReadFromDisk(txindex.pos.nFile, txindex.pos.nBlockPos, false))
                 return false; // unable to read block of previous transaction
             if (block.GetBlockTime() + nStakeMinAge > nTime)
-                continue; // only count coins meeting min age requirement
+                continue; // only count tokens meeting min age requirement
         }
 
         int64_t nValueIn = txPrev.vout[txin.prevout.n].nValue;
@@ -2649,7 +2649,7 @@ struct CImportingNow
 
 void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 {
-    RenameThread("stratis-loadblk");
+    RenameThread("civx-loadblk");
 
     CImportingNow imp;
 

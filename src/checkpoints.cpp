@@ -27,25 +27,36 @@ namespace Checkpoints
     //
     static MapCheckpoints mapCheckpoints =
         boost::assign::map_list_of
-        (  0,     uint256("0x0000066e91e46e5a264d42c89e1204963b2ee6be230b443e9159020539d972af") )
-        (  2,     uint256("0xbca5936f638181e74a5f1e9999c95b0ce77da48c2688399e72bcc53a00c61eff") ) // Premine
-        ( 50,     uint256("0x0353b43f4ce80bf24578e7c0141d90d7962fb3a4b4b4e5a17925ca95e943b816") )
-        ( 100,    uint256("0x688468a8aa48cd1c2197e42e7d8acd42760b7e2ac4bcab9d18ac149a673e16f6") )
-        ( 150,    uint256("0xe4ae9663519abec15e28f68bdb2cb89a739aee22f53d1573048d69141db6ee5d") )
-        ( 127500, uint256("0x4773ca7512489df22de03aa03938412fab5b46154b05df004b97bcbeaa184078") )
-        ( 128943, uint256("0x36bcaa27a53d3adf22b2064150a297adb02ac39c24263a5ceb73856832d49679") ) 
-        ( 136601, uint256("0xf5c5210c55ff1ef9c04715420a82728e1647f3473e31dc478b3745a97b4a6d10") ) // Hardfork to v2.0.0
-        ( 170000, uint256("0x22b10952e0cf7e85bfc81c38f1490708f195bff34d2951d193cc20e9ca1fc9d5") )
-        ( 200000, uint256("0x2391dd493be5d0ff0ef57c3b08c73eefeecc2701b80f983054bb262f7a146989") )
-        ( 250000, uint256("0x681c70fab7c1527246138f0cf937f0eb013838b929fbe9a831af02a60fc4bf55") )
-        ( 300000, uint256("0xd10ca8c2f065a49ae566c7c9d7a2030f4b8b7f71e4c6fc6b2a02509f94cdcd44") )
-        ( 350000, uint256("0xe2b76d1a068c4342f91db7b89b66e0f2146d3a4706c21f3a262737bb7339253a") )
-        ( 390000, uint256("0x4682737abc2a3257fdf4c3c119deb09cbac75981969e2ffa998b4f76b7c657bb") )
-        ( 394000, uint256("0x42857fa2bc15d45cdcaae83411f755b95985da1cb464ee23f6d40936df523e9f") )
+        (  0,     uint256("0x00000036090a68c523471da7a4f0f958c1b4403fef74a003be7f71877699cab7") )
+        (  2,     uint256("0x892f74fe6b462ec612dc745f19b7f299ffb94aabb17a0826a03092c0eb6f83ec") ) // Premine
+        ( 10,     uint256("0xd7c9e4381c4b9331be82d13e0b40b932ac624f3fa8b4e80fb8e9f22769095c0a") )
+        ( 50,     uint256("0x71b54f5cb27d2b0b1dd34ba89c7ff4fa8e8b37da727373cf98134069fb84803e") )
+        ( 100,    uint256("0xf1fbdb26299ca5bac77963cc2ffd9e1830c3f106b87b235b5c731b4b3259d383") )
+        ( 500,    uint256("0x72bc96ba513fb55431f335de897bb8ce80d898e17a3d4d5e05c48d1670d5f234") )
+        ( 1000,   uint256("0xf8f562cd694b5ca517aca2e1cd5b953c22a185e715209bfc2a6ae8eb0a524289") ) // v1.0.0.2
+        ( 5000,   uint256("0x9fbc9dc45a507a287d043b43a55e0623aca4368ca5c655bc1a7a97eef4951d1a") )
+        ( 10000,  uint256("0x45e01c13af7625b7289ed12f687864d485f603c2b5dcccfff26789bcbbc20439") )
+        ( 14000,  uint256("0xecd5ae5e58ddde01087a4c7f2033252acc7237a7aa958f4cd0eb016b3c11cd0e") )
+        ( 18000,  uint256("0x42ee388a72f85e8a63ed81bdaa4d87040a009cff8471f15e5711ab824faedaa7") ) // v1.0.0.3
+        ( 20000,  uint256("0xead9d788c5e0a275d9a8434487248d5b5ed1db14de8ea1627dd70ad1e5fb5f5b") )
+        ( 25000,  uint256("0x9e889f90ee0a249a84c2c090117be70de8d53466a5f0bb312fde435ad50080f0") )
+        ( 30000,  uint256("0xcd878a41441aca4e2903941c374d0caf17d7080fd1c5e37aca9caab63e82f333") )
+        ( 35500,  uint256("0x3196c8456be83bc810ef0f6e2b34a0962435e89d0844b9db8070487d5ec91afa") ) // v1.0.0.4
+        ( 40000,  uint256("0x4d7b1d7115714d16dce3266087309e898e02a7dc1eb8d3f450c8473836de5a19") )
+        ( 45000,  uint256("0x5f110ad2e1fbbb98bcd4d85167c7904631304bbd311144118f631d59795c0f00") )
+        ( 47000,  uint256("0x0b834c3a8d77939f5fc2e372bc03925a1170e8d386671a8d0f21fa8e5a9d440e") ) // v1.0.0.5
+        ( 60000,  uint256("0xe904061cd883995fa96fa162927f771a3e0a834866cf741da1bf6f64d9807aab") )
+        ( 80000,  uint256("0x4991919485bc0c4f1f3b89dde06f90cca64b6eee2887a8f2105ed1f7219b056e") ) // v1.0.0.6
     ;
 
-    // TestNet has no checkpoints
-    static MapCheckpoints mapCheckpointsTestnet;
+
+    static MapCheckpoints mapCheckpointsTestnet =
+        boost::assign::map_list_of
+        (  0,     uint256("0x0000059bb2c2048493efcb0f1a034972b3ce4089d54c93b69aaab212fb369887") )
+        (  2,     uint256("0xf1317999b79c983da36aeca960d4bda3957558db3e99c2474965049ef8ce2050") ) // Premine
+        ( 10,     uint256("0xa97253fddf3aee8cb585b7599638e1a45f86bfcf3244528ad84a6144d12be1bc") )
+        ( 50,     uint256("0x31f10f8829be7c6ba6935c4ec78409462788822677bd2a9f1e5dcaf0a8dc53e4") )
+    ;
 
     bool CheckHardened(int nHeight, const uint256& hash)
     {
